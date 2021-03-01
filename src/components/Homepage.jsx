@@ -13,6 +13,7 @@ const Homepage = () => {
   const dispatch = useDispatch();
   const login = (res) => {
     console.log(res);
+    // never put console.logs in the code commit
     dispatch(setSignedIn(true));
     dispatch(setUserData(res.profileObj));
   };
@@ -21,6 +22,7 @@ const Homepage = () => {
   return (
     <div className="home_page" style={{ display: isSignedIn ? "none" : "" }}>
       {!isSignedIn ? (
+    // convert this to !isSignedIn && ( syntax if you have nothing in the else case
         <div className="login_message">
           <h2>
             <FaBlog />
