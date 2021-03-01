@@ -26,6 +26,7 @@ const Navbar = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    // is this needed ? Please check 
     dispatch(setInput(inputValue));
   };
 
