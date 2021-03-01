@@ -30,8 +30,10 @@ const Blogs = () => {
     <div className="blog__page">
       <h1 className="blog__page__header">Blogs</h1>
       {loading ? <h1 className="loading">Loading...</h1> : ""}
+    // {loading && <h1 className="loading">Loading...</h1>}
       <div className="blogs">
         {blogs?.articles?.map((blog) => (
+    //destructure blog
           <a className="blog" target="blank" href={blog.url}>
             <img src={blog.image} alt="..." />
             <div>
@@ -46,6 +48,7 @@ const Blogs = () => {
         ))}
 
         {blogs?.totalArticles == 0 && (
+        // always use ===
           <h1 className="no__blogs">
             No blogs available 😞. Search something else to read blogs on the
             greatest platform.
